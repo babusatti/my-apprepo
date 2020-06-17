@@ -1,10 +1,12 @@
 pipeline {
-    agent any
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn clean install'
-            }
+node{
+    stage('init'){
+      //init sample
+    }
+    stage('build'){
+        withMaven(maven: 'mvn') {
+            sh "mvn clean package"
         }
     }
+}
 }
