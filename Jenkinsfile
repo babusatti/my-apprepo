@@ -1,8 +1,10 @@
 #!/usr/bin/env groovy
 pipeline {
   
-   def mvn_version = 'M3'
-withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) 
+ tools {
+        maven 'Maven 3.3.9'
+        jdk 'jdk8'
+    }
  
  
   agent any
