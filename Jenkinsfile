@@ -1,4 +1,5 @@
 pipeline {
+    agent any
 node{
     stage('init'){
       //init sample
