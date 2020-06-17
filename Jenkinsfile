@@ -1,6 +1,5 @@
 pipeline {
     agent any
-node{
     stages{
     stage('init'){
       //init sample
@@ -10,6 +9,6 @@ node{
             sh "mvn clean package"
         }
     }
-    }
+    
 }
 }
