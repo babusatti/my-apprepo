@@ -1,14 +1,22 @@
+#!/usr/bin/env groovy
 pipeline {
-    agent any
-    stages{
-    stage('init'){
-      //init sample
+  agent any
+
+  stages {
+    stage("Build") {
+      steps {
+        sh 'mvn -v'
+      }
     }
-    stage('build'){
-        withMaven(maven: 'mvn') {
-            sh "mvn clean package"
-        }
+     stage("Buildn") {
+      steps {
+        sh 'mvn clean intsall'
+      }
+     }
+    stage("Deploy") {
+      steps {
+        echo "Deploy!"
+      }
     }
-    
-}
+  }
 }
