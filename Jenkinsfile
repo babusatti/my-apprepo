@@ -1,15 +1,18 @@
 #!/usr/bin/env groovy
 pipeline {
+  
+   def mvn_version = 'M3'
+withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+ 
+  
   agent any
 
   stages {
     stage("Build") {
       steps {
-        def mvn_version = 'M3'
-withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
-  //sh "mvn clean package"
-}
         sh 'mvn -v'
+}
+       
       }
     }
      stage("Buildn") {
