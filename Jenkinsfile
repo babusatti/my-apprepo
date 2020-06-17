@@ -1,6 +1,7 @@
 pipeline {
     agent any
 node{
+    stages{
     stage('init'){
       //init sample
     }
@@ -8,6 +9,7 @@ node{
         withMaven(maven: 'mvn') {
             sh "mvn clean package"
         }
+    }
     }
 }
 }
