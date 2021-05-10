@@ -3,11 +3,8 @@ line1
 line2
 <<<<<<< HEAD
 line3
-<<<<<<< HEAD
 =======
 >>>>>>> parent of 05ba14f... third line
-=======
->>>>>>> parent of 0710f2d... four line
 pipeline {
   
  tools {
