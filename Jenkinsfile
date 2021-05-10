@@ -1,10 +1,5 @@
 #!/usr/bin/env groovy
-line1
-line2
-<<<<<<< HEAD
-line3
-=======
->>>>>>> parent of 05ba14f... third line
+line1 for reee
 pipeline {
   
  tools {
