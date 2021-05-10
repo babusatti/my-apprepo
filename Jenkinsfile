@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 line1
 line2
+line3
 pipeline {
   
  tools {
