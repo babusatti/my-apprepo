@@ -20,7 +20,7 @@ pipeline {
     
     stage("CheckOut-SCM") {
       steps {
-        sh 'mvn -v'
+        sh 'git clone https://github.com/babusatti/my-apprepo.git'
             }
                    }
    
