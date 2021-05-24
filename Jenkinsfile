@@ -10,9 +10,9 @@ pipeline {
   agent any
 
   stages {
-    stage("Build") {
+    stage("CheckOut-SCM") {
       steps {
-        sh 'mvn -v'
+        sh 'git 'https://github.com/babusatti/my-apprepo.git''
             }
                    }
     
