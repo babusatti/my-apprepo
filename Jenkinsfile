@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage("CheckOut-SCM") {
       steps {
-        sh 'git 'https://github.com/babusatti/my-apprepo.git''
+        sh "git 'https://github.com/babusatti/my-apprepo.git'"
             }
                    }
     
