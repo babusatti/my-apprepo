@@ -2,7 +2,7 @@
 pipeline {
   
  tools {
-        maven 'Maven 3.6.3'
+        maven 'maven2'
     
     }
  
@@ -16,7 +16,7 @@ pipeline {
             }
                    }
     
-     stage("Buildn") {
+     stage("Build jar") {
       steps {
         sh 'mvn clean install'
            }
