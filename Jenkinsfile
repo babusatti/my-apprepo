@@ -5,17 +5,25 @@ pipeline {
         maven 'maven2'
     
     }
-  cleanWs()
+  
  
  
   agent any
 
   stages {
+    
+    stage("clean ws") {
+      steps {
+        cleanWs()
+            }
+                   }
+    
     stage("CheckOut-SCM") {
       steps {
         sh 'mvn -v'
             }
                    }
+   
     
      stage("Build jar") {
       steps {
