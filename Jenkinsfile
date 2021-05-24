@@ -20,14 +20,14 @@ pipeline {
     
     stage("CheckOut-SCM") {
       steps {
-        sh 'git clone https://github.com/babusatti/my-apprepo.git'
+        git 'https://github.com/babusatti/my-apprepo.git'
             }
                    }
    
     
      stage("Build jar") {
       steps {
-        sh 'my-apprepo/mvn clean install'
+        sh 'mvn clean install'
            }
                     }
     stage("Deploy") {
