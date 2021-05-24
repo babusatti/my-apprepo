@@ -27,7 +27,7 @@ pipeline {
     
      stage("Build jar") {
       steps {
-        sh 'mvn -f pom.xml clean install'
+        sh 'mvn -f /var/lib/jenkins/workspace/demo2-pipeline/pom.xml clean install'
            }
                     }
     stage("Deploy") {
