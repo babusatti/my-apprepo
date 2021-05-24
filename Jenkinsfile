@@ -27,7 +27,7 @@ pipeline {
     
      stage("Build jar") {
       steps {
-        sh 'mvn clean install'
+        sh 'mvn -f pom.xml clean install'
            }
                     }
     stage("Deploy") {
