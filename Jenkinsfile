@@ -5,6 +5,7 @@ pipeline {
         maven 'maven2'
     
     }
+  cleanWs()
  
  
   agent any
